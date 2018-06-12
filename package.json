@@ -8,6 +8,10 @@
 		"build": "npx tsc",
 		"build_run": "npm run build; npm run start"
 	},
+	"preferGlobal": true,
+	"directories": {
+		"bin": "./bin"
+	},
 	"keywords": [
 		"licence",
 		"lisense",
