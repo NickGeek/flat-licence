@@ -1,6 +1,6 @@
 {
 	"name": "flat-licence",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Generate a markdown list of all included prod works and their licences from a package.json",
 	"main": "dist/index.js",
 	"scripts": {
