@@ -16,7 +16,13 @@
 	"author": "Nick Webster",
 	"license": "MPL-2.0",
 	"devDependencies": {
+		"@types/get-stdin": "^5.0.1",
+		"@types/license-checker": "^15.0.0",
 		"@types/node": "^10.3.2",
 		"typescript": "^2.9.1"
+	},
+	"dependencies": {
+		"get-stdin": "^6.0.0",
+		"license-checker": "^20.1.0"
 	}
 }
