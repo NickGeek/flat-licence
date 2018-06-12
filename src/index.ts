@@ -1,7 +1,6 @@
 import LicenceChecker from 'license-checker';
 
 async function generate() {
-	// Get the package.json as stdin
 	const info = await getDepInfo();
 	const infoToMd: string[] = Object.entries(info).map(([name, dep]: [string, LicenceChecker.ModuleInfo]) => {
 		let res = `\n\n## ${name}`;
@@ -28,5 +27,5 @@ async function getDepInfo(): Promise<LicenceChecker.ModuleInfos> {
 }
 
 generate()
-	.then(a => console.log(a))
+	.then(md => console.log(md))
 	.catch(err => console.error(`There was an error generating the file:\n${err}`));
