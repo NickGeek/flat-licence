@@ -5,7 +5,7 @@ async function generate() {
 	// Get the package.json as stdin
 	const info = await getDepInfo();
 	const infoToMd: string[] = Object.entries(info).map(([name, dep]: [string, LicenceChecker.ModuleInfo]) => {
-		let res = `## ${name}`;
+		let res = `\n\n## ${name}`;
 		if (dep.publisher) res += `\n- Published By: ${dep.publisher}`;
 		if (dep.licenses) res += `\n- Licence: ${dep.licenses}`;
 		if (dep.repository || dep.url) res += `\n- ${dep.repository || dep.url}`;
@@ -13,7 +13,7 @@ async function generate() {
 		return res;
 	});
 
-	return '# Included Works\n' + infoToMd.reduce((str: string, current: string) => str += current + '\n\n');
+	return '# Included Works' + infoToMd.reduce((str: string, current: string) => str += current);
 }
 
 async function getDepInfo(): Promise<LicenceChecker.ModuleInfos> {
