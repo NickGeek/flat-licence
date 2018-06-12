@@ -1,4 +1,3 @@
-import getStdin from 'get-stdin';
 import LicenceChecker from 'license-checker';
 
 async function generate() {
